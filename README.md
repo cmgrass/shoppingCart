@@ -5,6 +5,9 @@ Following academind series.
 node app notes:
   * Launch app: $ npm start
 
+  * Install npm package, and save to package.json: $ npm install --save <packageName>
+    - Example: $ npm install --save mongoose
+
 mongodb notes:
   * MongoDB configuration file: /etc/mongod.conf
     - network interfaces definition (port, ip bind)
