@@ -19,6 +19,8 @@ mongodb notes:
   * Launch a MongoDB client: /user/bin$ ./mongo
 
   * Test server (from mongo client):
-    - db.data.insert({"jsonAttribute": "value"}) (where db.data, "data" is collection name)
-    - db.data.find()
-      >> Expect: { "_id" : ObjectId("..."), "jsonAttribute" : "value" }
+    - db.[collection].insert({"jsonAttribute": "value"}) (where db.data, "data" is collection name)
+    - use [databaseName] // access a specific database
+    - db.[collection].find() // within a specific database, query the selected collection
+      >> Expect: { "_id" : ObjectId("..."), "miscDocumentOject" : "value" }
+    - db.dropDatabase() // clear contents of a database. Useful for testing.
