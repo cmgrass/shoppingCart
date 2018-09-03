@@ -1,95 +1,23 @@
-<!-- ROW 1 (Copy pasta until later, do dynamically?) -->
+{{# each products }}
+
+<!--- ROW --->
 <div class="row">
-  <!-- Card 01 (We will replace this later) -->
+  <!--- COLUMN --->
+  {{# each this }}
   <div class="col-sm-6 col-md-4">
     <div class="card item">
-      <img class="card-img-top" src="https://img.jpcycles.com/zoom/630-226_A.jpg" alt="item image">
+      <img class="card-img-top" src="{{ this.imagePath }}" alt="item image">
       <div class="card-body">
-        <h5 class="card-title">Ball Bearing 12mm O.D</h5>
-        <p class="card-text description">This ball bearing has very low coefficient of friction, use this on any 12mm race to improve efficiency of the driven shaft.</p>
+        <h5 class="card-title">{{ this.title }}</h5>
+        <p class="card-text description">{{ this.description }}</p>
         <div>
-          <div class="price float-left">$7.56</div>
+          <div class="price float-left">${{ this.price }}</div>
           <a href="#" class="btn btn-info float-right">Add To Cart</a>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Card 02 (We will replace this later) -->
-  <div class="col-sm-6 col-md-4">
-    <div class="card item">
-      <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1iy2TIVXXXXbqapXXq6xXFXXXd/AKRAPOVIC-Titanium-carbon-fiber-motorcycle-exhaust-pipe-GP-Force-motobike-muffler-silencieux-moto-escape-silenciador-modificada.jpg_640x640.jpg" alt="item image">
-      <div class="card-body">
-        <h5 class="card-title">Titanium Exhaust Pipe</h5>
-        <p class="card-text description">Throw this bad boy on to make you bike rip it!</p>
-        <div>
-          <div class="price float-left">$949.98</div>
-          <a href="#" class="btn btn-info float-right">Add To Cart</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Card 03 (We will replace this later) -->
-  <div class="col-sm-6 col-md-4">
-    <div class="card item">
-      <img class="card-img-top" src="http://www.howrah.org/images/articles/camshaft/camshaft-5.jpg" alt="item image">
-      <div class="card-body">
-        <h5 class="card-title">Lightweight Camshaft</h5>
-        <p class="card-text description">Get to redline faster. Pin it to win it with these lightweight camshafts.</p>
-        <div>
-          <div class="price float-left">$256.78</div>
-          <a href="#" class="btn btn-info float-right">Add To Cart</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  {{/each}}
 </div>
 
-<!-- ROW 2 (Copy pasta until later, do dynamically?) -->
-<div class="row">
-  <!-- Card 01 (We will replace this later) -->
-  <div class="col-sm-6 col-md-4">
-    <div class="card item">
-      <img class="card-img-top" src="http://www.balmainmotorcycles.com.au/images/Michelin-power-cup_tyre.jpg" alt="item image">
-      <div class="card-body">
-        <h5 class="card-title">Michelling PowerCUP</h5>
-        <p class="card-text description">Stay sticky all weekend, this tire profile lets your bike fall into turns, while getting on the gas coming out. Includes 120/70 Front, and 180/70 Rear.</p>
-        <div>
-          <div class="price float-left">$412.89</div>
-          <a href="#" class="btn btn-info float-right">Add To Cart</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Card 02 (We will replace this later) -->
-  <div class="col-sm-6 col-md-4">
-    <div class="card item">
-      <img class="card-img-top" src="https://content.motosport.com/images/items/900/SSX/SSX0006/X001.jpg" alt="item image">
-      <div class="card-body">
-        <h5 class="card-title">Sprocket and Chain Kit</h5>
-        <p class="card-text description">Aluminum sprockets and lightweight 520 chain.</p>
-        <div>
-          <div class="price float-left">$176.27</div>
-          <a href="#" class="btn btn-info float-right">Add To Cart</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Card 03 (We will replace this later) -->
-  <div class="col-sm-6 col-md-4">
-    <div class="card item">
-      <img class="card-img-top" src="https://images.homedepot-static.com/productImages/98edf106-f2f0-4a78-bb26-9b7eaabe343b/svn/crc-car-cleaners-de-icers-05089-64_1000.jpg" alt="item image">
-      <div class="card-body">
-        <h5 class="card-title">Brake Cleaner</h5>
-        <p class="card-text description">Spray your parts to like new condition.</p>
-        <div>
-          <div class="price float-left">$2.78</div>
-          <a href="#" class="btn btn-info float-right">Add To Cart</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+{{/each}}
