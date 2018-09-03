@@ -10,8 +10,20 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
-// Define mongodb server/collection we will connect to as client.
-mongoose.connect('localhost:27017/shopping');
+/*
+  Define mongodb server/database we will connect to as client.
+  mongo structure:
+    server
+      database
+        collection
+          document0
+          document1
+          .
+          .
+          documentN-1
+          documentN
+*/
+mongoose.connect('mongodb://localhost:27017/shopping', { useNewUrlParser: true });
 
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
