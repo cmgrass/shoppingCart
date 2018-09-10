@@ -24,8 +24,7 @@ router.get('/user/signup', function(req, res, next) {
 });
 
 /* POST signup */
-router.post('/user/signup', function(req, res, next) {
-  res.redirect('/');
-});
+/* I   S T O P E D   H E R E */
+router.post('/user/signup', passport.authenticate('local.signup');
 
 module.exports = router;
